@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-PK">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page Not Found | Quality Steel Traders</title>
+  <meta name="robots" content="noindex, follow"/>
+  <meta name="theme-color" content="#0d1117"/>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --steel-dark: #0d1117;
+      --accent:     #c0a96b;
+      --text-main:  #e8edf2;
+      --text-muted: #8a9aab;
+      --divider:    rgba(192,169,107,0.18);
+    }
+    body {
+      min-height: 100vh;
+      background: var(--steel-dark);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      display: flex; align-items: center; justify-content: center;
+      padding: 6vw;
+      position: relative;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(192,169,107,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(192,169,107,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+    .wrap { position: relative; max-width: 560px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1.2rem;
+    }
+    .eyebrow::before { content: ''; display: block; width: 32px; height: 2px; background: var(--accent); }
+    h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(3rem, 10vw, 5.5rem);
+      font-weight: 800; line-height: 0.95;
+      text-transform: uppercase; margin-bottom: 1.2rem;
+    }
+    h1 em { font-style: normal; color: var(--accent); display: block; }
+    p { color: var(--text-muted); line-height: 1.7; margin-bottom: 2.2rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2.2rem;
+      background: var(--accent); color: #0d1117;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 0.95rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      text-decoration: none; transition: background 0.2s, transform 0.15s;
+    }
+    .btn:hover { background: #e8d9a8; transform: translateY(-2px); }
+    .helpline { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--divider); font-size: 0.9rem; color: var(--text-muted); }
+    .helpline a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="eyebrow">Error 404</p>
+    <h1>Page<em>Not Found</em></h1>
+    <p>This page doesn't exist — but our steel does. Head back to the main page for our full range of stainless sheets, pipes, bars and fittings.</p>
+    <a href="/" class="btn">Back to Home</a>
+    <div class="helpline">
+      Need something specific? Call
+      <a href="tel:+923324495351">+92 332 4495351</a> or
+      <a href="https://wa.me/923324495351" target="_blank" rel="noopener">message us on WhatsApp</a>.
+    </div>
+  </div>
+</body>
+</html>
