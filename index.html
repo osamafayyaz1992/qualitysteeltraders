@@ -13,12 +13,13 @@
   <meta name="theme-color" content="#0d1117"/>
 
   <!-- ── GEO ──
-       geo.position / ICBM intentionally omitted: the exact shop coordinates are not
-       confirmed. Stating wrong coordinates conflicts with the Google Business Profile
-       pin and hurts local ranking — the postal address below is enough for Google to
-       geocode. Add them back only from the verified Business Profile pin. -->
+       Coordinates taken from the verified Google Business Profile embed, so they
+       match the listing's pin exactly. Do not edit by hand — regenerate from
+       Google Maps → Share → Embed a map if the shop ever moves. -->
   <meta name="geo.region" content="PK-PB"/>
   <meta name="geo.placename" content="Lahore"/>
+  <meta name="geo.position" content="31.573051;74.327244"/>
+  <meta name="ICBM" content="31.573051, 74.327244"/>
 
   <!-- ── SOCIAL / WHATSAPP LINK PREVIEW ── -->
   <meta property="og:type" content="website"/>
@@ -56,7 +57,6 @@
     "description": "Stainless steel supplier in Lahore, Pakistan. Sheets, plates, pipes, tubes, bars, coils, angles, channels, fittings and flanges in grades 202, 304 and 316.",
     "url": "https://qualitysteeltraderslahore.com/",
     "telephone": "+923324495351",
-    "email": "info@qualitysteeltraders.pk",
     "image": "https://qualitysteeltraderslahore.com/og-image.png",
     "priceRange": "$$",
     "currenciesAccepted": "PKR",
@@ -68,7 +68,12 @@
       "postalCode": "54000",
       "addressCountry": "PK"
     },
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=Quality+Steel+Traders+50+Steel+Market+Garhi+Shahu+Lahore",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 31.573051,
+      "longitude": 74.327244
+    },
+    "hasMap": "https://maps.google.com/?cid=16967159641562299326",
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -488,41 +493,6 @@
       border: none; display: block;
       filter: grayscale(0.3) contrast(1.05);
     }
-    /* Shown until a real Google Business Profile embed is pasted in */
-    .map-card {
-      width: 100%; height: 100%;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      gap: 0.4rem;
-      text-align: center;
-      text-decoration: none;
-      padding: 2rem;
-      background:
-        linear-gradient(rgba(192,169,107,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(192,169,107,0.05) 1px, transparent 1px),
-        var(--steel-dark);
-      background-size: 40px 40px, 40px 40px, auto;
-      transition: background-color 0.2s;
-    }
-    .map-card:hover { background-color: var(--steel-mid); }
-    .map-pin { font-size: 1.8rem; margin-bottom: 0.3rem; }
-    .map-card-title {
-      font-family: var(--font-display);
-      font-size: 1.15rem; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 0.05em;
-      color: var(--text-main);
-    }
-    .map-card-sub { font-size: 0.85rem; color: var(--text-muted); }
-    .map-card-btn {
-      margin-top: 1.2rem;
-      padding: 0.6rem 1.5rem;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      font-family: var(--font-display);
-      font-size: 0.85rem; font-weight: 600;
-      letter-spacing: 0.1em; text-transform: uppercase;
-    }
-    .map-card:hover .map-card-btn { background: var(--accent); color: var(--steel-dark); }
 
     /* ── FOOTER ── */
     footer {
@@ -881,31 +851,17 @@
           <div class="contact-val">Mon – Sat &nbsp; 9:00 AM – 6:00 PM<br>Closed on Sundays &amp; Public Holidays</div>
         </div>
       </div>
-      <div class="contact-row reveal">
-        <div class="contact-icon" aria-hidden="true">✉️</div>
-        <div>
-          <div class="contact-label">Email</div>
-          <div class="contact-val">
-            <a href="mailto:info@qualitysteeltraders.pk" style="color:var(--text-main);text-decoration:none;">info@qualitysteeltraders.pk</a>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <!-- TO SHOW A LIVE MAP HERE:
-         Google Maps → search your Business Profile → Share → "Embed a map" → Copy HTML.
-         Paste that <iframe> in place of the <a class="map-card"> below; it will inherit
-         .map-wrapper's sizing. Only the Business Profile embed is used, so the pin
-         matches your verified listing exactly. -->
+    <!-- Embed generated from the verified Google Business Profile, so the pin
+         matches the listing exactly. Sizing comes from .map-wrapper. -->
     <div class="map-wrapper reveal">
-      <a class="map-card"
-         href="https://www.google.com/maps/search/?api=1&query=Quality+Steel+Traders+50+Steel+Market+Garhi+Shahu+Lahore"
-         target="_blank" rel="noopener">
-        <span class="map-pin" aria-hidden="true">📍</span>
-        <span class="map-card-title">50 Steel Market, Garhi Shahu</span>
-        <span class="map-card-sub">Dil Mohammad Road, Lahore 54000</span>
-        <span class="map-card-btn">Open in Google Maps →</span>
-      </a>
+      <iframe
+        title="Map: Quality Steel Traders, 50 Steel Market, Garhi Shahu, Lahore"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.2186504502506!2d74.32724400000001!3d31.57305139999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191b2243765601%3A0xeb7775cc52aa3bbe!2sQuality%20Steel%20Traders!5e0!3m2!1sen!2s!4v1786720182545!5m2!1sen!2s"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </div>
   </div>
 </section>
